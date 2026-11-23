@@ -87,22 +87,98 @@
     <hr class="container">
 
     <section class="container section" id="schedule" aria-labelledby="schedule-title">
-      <div class="section-heading"><h2 id="schedule-title">Three days. New possibilities.</h2><p>Make a little room for something new.</p></div>
-      <div class="table-scroll" role="region" aria-label="Proposed event schedule, scroll horizontally on small screens" tabindex="0">
-        <table>
-          <caption>Proposed schedule · December 2–4, 2026 · All times Philippine Time (UTC+8)</caption>
-          <thead><tr><th scope="col">Date</th><th scope="col">Time</th><th scope="col">Activity</th><th scope="col">Proposed venue</th></tr></thead>
-          <tbody>
-            <tr><th scope="row">Dec. 2, 2026</th><td>9:00–10:00 AM</td><td>Opening Program</td><td>Assembly Hall</td></tr>
-            <tr><th scope="row">Dec. 2, 2026</th><td>10:30 AM–12:00 PM</td><td><a href="#innovation-exhibit">Innovation Exhibit</a></td><td>Exhibit Hall</td></tr>
-            <tr><th scope="row">Dec. 3, 2026</th><td>9:00–11:00 AM</td><td><a href="#web-workshop">Web Development Workshop</a></td><td>Computer Lab</td></tr>
-            <tr><th scope="row">Dec. 3, 2026</th><td>1:00–3:00 PM</td><td>Robotics Challenge</td><td>Assembly Hall</td></tr>
-            <tr><th scope="row">Dec. 4, 2026</th><td>10:00–11:00 AM</td><td>Tech Career Talk</td><td>Assembly Hall</td></tr>
-            <tr><th scope="row">Dec. 4, 2026</th><td>1:00–3:00 PM</td><td>Project Showcase</td><td>Exhibit Hall</td></tr>
-          </tbody>
-        </table>
+      <div class="schedule-header">
+        <div>
+          <h2 id="schedule-title">Three days. New possibilities.</h2>
+          <p class="schedule-subtitle">December 2–4, 2026 · All times Philippine Time (UTC+8)</p>
+        </div>
+        <div class="schedule-filters" role="group" aria-label="Filter schedule by day">
+          <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All Days</button>
+          <button type="button" class="filter-btn" data-filter="1" aria-pressed="false">Day 1 · Dec 2</button>
+          <button type="button" class="filter-btn" data-filter="2" aria-pressed="false">Day 2 · Dec 3</button>
+          <button type="button" class="filter-btn" data-filter="3" aria-pressed="false">Day 3 · Dec 4</button>
+        </div>
       </div>
-      <p class="small-note">This is a fictional program. Times and room names are proposed for this student concept.</p>
+
+      <div class="schedule-days">
+        <article class="schedule-day" data-day="1">
+          <div class="day-heading">
+            <span class="day-tag">DAY 01</span>
+            <h3>Dec. 2</h3>
+            <p>Wednesday</p>
+          </div>
+          <ul class="day-sessions">
+            <li class="session-item">
+              <span class="session-time">9:00–10:00 AM</span>
+              <div class="session-body">
+                <h4>Opening Program</h4>
+                <p>Welcome remarks and keynote kickoff for SET Days 2026.</p>
+              </div>
+              <span class="session-venue">Assembly Hall</span>
+            </li>
+            <li class="session-item">
+              <span class="session-time">10:30 AM–12:00 PM</span>
+              <div class="session-body">
+                <h4><a href="#innovation-exhibit">Innovation Exhibit</a></h4>
+                <p>Interactive walkthrough of student prototypes and engineering demos.</p>
+              </div>
+              <span class="session-venue">Exhibit Hall</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="schedule-day" data-day="2">
+          <div class="day-heading">
+            <span class="day-tag">DAY 02</span>
+            <h3>Dec. 3</h3>
+            <p>Thursday</p>
+          </div>
+          <ul class="day-sessions">
+            <li class="session-item">
+              <span class="session-time">9:00–11:00 AM</span>
+              <div class="session-body">
+                <h4><a href="#web-workshop">Web Development Workshop</a></h4>
+                <p>Hands-on HTML fundamentals session. Bring your laptop.</p>
+              </div>
+              <span class="session-venue">Computer Lab</span>
+            </li>
+            <li class="session-item">
+              <span class="session-time">1:00–3:00 PM</span>
+              <div class="session-body">
+                <h4>Robotics Challenge</h4>
+                <p>Team-based autonomous and guided obstacle-course runs.</p>
+              </div>
+              <span class="session-venue">Assembly Hall</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="schedule-day" data-day="3">
+          <div class="day-heading">
+            <span class="day-tag">DAY 03</span>
+            <h3>Dec. 4</h3>
+            <p>Friday</p>
+          </div>
+          <ul class="day-sessions">
+            <li class="session-item">
+              <span class="session-time">10:00–11:00 AM</span>
+              <div class="session-body">
+                <h4>Tech Career Talk</h4>
+                <p>Industry insights, career paths, and practical skills for engineering and IT students.</p>
+              </div>
+              <span class="session-venue">Assembly Hall</span>
+            </li>
+            <li class="session-item">
+              <span class="session-time">1:00–3:00 PM</span>
+              <div class="session-body">
+                <h4>Project Showcase</h4>
+                <p>Student presentations, live Q&amp;A, and peer feedback across featured builds.</p>
+              </div>
+              <span class="session-venue">Exhibit Hall</span>
+            </li>
+          </ul>
+        </article>
+      </div>
     </section>
 
     <hr class="container">

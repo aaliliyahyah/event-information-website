@@ -1,21 +1,18 @@
-// Image-map coordinates use the original 800px-wide image.
-// Recalculate them from the originals so resizing does not accumulate rounding errors.
-const venueImage = document.querySelector("#venue-image");
-const mapAreas = document.querySelectorAll("map area");
+const filterButtons = document.querySelectorAll(".filter-btn");
+const scheduleDays = document.querySelectorAll(".schedule-day");
 
-function resizeImageMap() {
-  const scale = venueImage.clientWidth / 800;
+filterButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    const selectedDay = button.dataset.filter;
 
-  mapAreas.forEach(function (area) {
-    const originalCoordinates = area.dataset.coords.split(",");
-    const scaledCoordinates = originalCoordinates.map(function (coordinate) {
-      return Math.round(Number(coordinate) * scale);
+    filterButtons.forEach(function (btn) {
+      const isSelected = btn === button;
+      btn.classList.toggle("is-active", isSelected);
+      btn.setAttribute("aria-pressed", String(isSelected));
     });
 
-    area.coords = scaledCoordinates.join(",");
+    scheduleDays.forEach(function (day) {
+      day.hidden = selectedDay !== "all" && day.dataset.day !== selectedDay;
+    });
   });
-}
-
-venueImage.addEventListener("load", resizeImageMap);
-window.addEventListener("resize", resizeImageMap);
-resizeImageMap();
+});
