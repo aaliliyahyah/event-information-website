@@ -24,7 +24,6 @@ ol { padding-left: 24px; }
 .container { width: min(1120px, calc(100% - 64px)); margin-inline: auto; }
 .section { padding-block: 80px; }
 hr { border: 0; border-top: 1px solid var(--line); }
-.small-note { font-size: 0.875rem; line-height: 1.6; }
 .skip-link { position: absolute; top: -100px; left: 20px; padding: 12px; background: var(--gold); z-index: 2; }
 .skip-link:focus { top: 12px; }
 
@@ -52,8 +51,6 @@ h1 em { font-style: normal; text-decoration: underline; text-decoration-color: v
 .tile-narrow { grid-column: span 5; }
 .collage-tile img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.35s ease; }
 .collage-tile:hover img { transform: scale(1.03); }
-.proposal-note { padding: 18px 22px; background: var(--light); font-size: 0.875rem; margin-bottom: 0; }
-.proposal-note strong { color: var(--navy); }
 
 /* Main information */
 .about-section { display: grid; grid-template-columns: 1fr 1.35fr; gap: 80px; }
