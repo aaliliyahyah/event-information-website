@@ -183,16 +183,67 @@
 
     <hr class="container">
 
-    <section class="container section venue-section" id="venue" aria-labelledby="venue-title">
-      <div class="venue-copy"><h2 id="venue-title">Meet you here.</h2><p>The proposed event spaces include an Exhibit Hall for student projects, a Computer Lab for workshops, and an Assembly Hall for talks and challenges.</p><p>Select the Exhibit Hall or Computer Lab in the guide to explore its activity.</p><p class="small-note">Illustrative layout only. This is not an official NU Fairview campus map.</p><div class="venue-links"><a href="#innovation-exhibit">Explore the exhibit</a><a href="#web-workshop">Explore the workshop</a></div></div>
-      <figure class="venue-guide">
-        <img id="venue-image" src="images/venue-guide.svg" width="800" height="500" usemap="#event-map" alt="Illustrative event layout: Exhibit Hall on the upper left, Computer Lab on the upper right, and Assembly Hall below, connected by a central walkway.">
-        <map name="event-map">
-          <area shape="rect" coords="45,50,365,225" data-coords="45,50,365,225" href="#innovation-exhibit" alt="Exhibit Hall: explore the Innovation Exhibit">
-          <area shape="rect" coords="435,50,755,225" data-coords="435,50,755,225" href="#web-workshop" alt="Computer Lab: explore the Web Development Workshop">
-        </map>
-        <figcaption>Proposed event guide · Select a highlighted space</figcaption>
-      </figure>
+    <section class="container section" id="venue" aria-labelledby="venue-title">
+      <div class="venue-header">
+        <div>
+          <h2 id="venue-title">Meet you here.</h2>
+          <p class="venue-address">National University Fairview · SM City Fairview Complex, Quirino Hwy cor. Regalado Hwy, Quezon City</p>
+        </div>
+        <p class="venue-intro">Three dedicated spaces across campus host the exhibits, hands-on coding sessions, robotics runs, and main-stage talks throughout SET Days.</p>
+      </div>
+
+      <div class="venue-cards">
+        <article class="venue-card">
+          <div class="venue-card-top">
+            <span class="venue-index">01 · MAIN FLOOR</span>
+            <svg class="venue-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="12" rx="1.5"/>
+              <path d="M8 20h8M12 16v4"/>
+            </svg>
+          </div>
+          <h3>Exhibit Hall</h3>
+          <p>Open showcase floor for student hardware builds, software prototypes, and live demonstrations.</p>
+          <ul class="venue-sessions">
+            <li><span>Dec 2</span> Innovation Exhibit</li>
+            <li><span>Dec 4</span> Project Showcase</li>
+          </ul>
+          <a class="venue-card-link" href="#innovation-exhibit">Explore the exhibit</a>
+        </article>
+
+        <article class="venue-card">
+          <div class="venue-card-top">
+            <span class="venue-index">02 · TECH WING</span>
+            <svg class="venue-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="11" rx="1.5"/>
+              <path d="M2 19h20"/>
+            </svg>
+          </div>
+          <h3>Computer Lab</h3>
+          <p>Equipped workstation room built for guided coding exercises, collaborative debugging, and live web builds.</p>
+          <ul class="venue-sessions">
+            <li><span>Dec 3</span> Web Development Workshop</li>
+          </ul>
+          <a class="venue-card-link" href="#web-workshop">Explore the workshop</a>
+        </article>
+
+        <article class="venue-card">
+          <div class="venue-card-top">
+            <span class="venue-index">03 · AUDITORIUM</span>
+            <svg class="venue-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+              <path d="M3 10l9-6 9 6v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9Z"/>
+              <path d="M9 20v-6h6v6"/>
+            </svg>
+          </div>
+          <h3>Assembly Hall</h3>
+          <p>Main campus auditorium for community gatherings, the robotics course, and speaker conversations.</p>
+          <ul class="venue-sessions">
+            <li><span>Dec 2</span> Opening Program</li>
+            <li><span>Dec 3</span> Robotics Challenge</li>
+            <li><span>Dec 4</span> Tech Career Talk</li>
+          </ul>
+          <a class="venue-card-link" href="#schedule">View full schedule</a>
+        </article>
+      </div>
     </section>
 
     <hr class="container">

@@ -92,11 +92,23 @@ dd:last-child { margin-bottom: 0; }
 .session-body h4 a:hover { text-decoration: underline; }
 .session-body p { margin-bottom: 0; font-size: 0.9375rem; line-height: 1.6; }
 .session-venue { display: inline-block; padding: 5px 12px; background: var(--light); color: var(--navy); border-radius: 4px; font-size: 0.8125rem; font-weight: 700; white-space: nowrap; }
-.venue-section { display: grid; grid-template-columns: 1fr 1.5fr; gap: 64px; align-items: center; }
-.venue-guide { margin: 0; }
-.venue-guide img { display: block; width: 100%; height: auto; }
-figcaption { margin-top: 12px; font-size: 0.875rem; }
-.venue-links { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 0.875rem; }
+.venue-header { display: grid; grid-template-columns: 1fr 1.15fr; gap: 48px; align-items: end; margin-bottom: 40px; }
+.venue-header h2 { margin-bottom: 10px; }
+.venue-address { font-size: 0.875rem; margin-bottom: 0; }
+.venue-intro { margin-bottom: 0; }
+.venue-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.venue-card { display: flex; flex-direction: column; padding: 28px; background: var(--light); border: 1px solid var(--line); border-radius: 6px; }
+.venue-card-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 20px; }
+.venue-index { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; color: var(--text); }
+.venue-icon { width: 24px; height: 24px; color: var(--navy); flex-shrink: 0; }
+.venue-card h3 { font-size: 1.35rem; margin-bottom: 10px; }
+.venue-card > p { font-size: 0.9375rem; line-height: 1.65; margin-bottom: 20px; }
+.venue-sessions { list-style: none; padding: 16px 0 0; margin: auto 0 22px; border-top: 1px solid var(--line); font-size: 0.875rem; }
+.venue-sessions li { display: flex; gap: 10px; align-items: baseline; }
+.venue-sessions li + li { margin-top: 6px; }
+.venue-sessions span { color: var(--navy); font-weight: 700; font-variant-numeric: tabular-nums; min-width: 44px; }
+.venue-card-link { align-self: flex-start; font-size: 0.875rem; font-weight: 700; text-decoration: none; }
+.venue-card-link:hover { text-decoration: underline; }
 .highlight { display: grid; grid-template-columns: 1fr 1.7fr; gap: 48px; padding-block: 30px; border-top: 1px solid var(--line); }
 .highlight h3 { font-size: 1.5rem; }
 .highlight p { max-width: 66ch; margin-bottom: 12px; }
@@ -126,11 +138,12 @@ pre { font-family: Consolas, monospace; font-size: 0.875rem; line-height: 1.8; w
   .header-inner { flex-direction: column; align-items: flex-start; padding-block: 22px; gap: 18px; }
   .hero { gap: 36px; }
   .collage-tile { height: 165px; }
-  .about-section, .venue-section { gap: 40px; }
+  .about-section, .venue-header { gap: 36px; }
   .activity-list { column-gap: 24px; }
   .schedule-day { grid-template-columns: 150px 1fr; gap: 24px; }
   .session-item { grid-template-columns: 145px 1fr; gap: 8px 20px; }
   .session-venue { grid-column: 2; justify-self: start; }
+  .venue-cards { grid-template-columns: repeat(2, 1fr); }
   .participation-inner { gap: 36px; }
 }
 @media (max-width: 700px) {
@@ -144,7 +157,7 @@ pre { font-family: Consolas, monospace; font-size: 0.875rem; line-height: 1.8; w
   .hero-card { max-width: 520px; justify-self: center; }
   .collage-tile { height: 155px; }
   .tile-wide, .tile-narrow { grid-column: span 6; }
-  .about-section, .venue-section, .learning-notes, .participation-inner, .highlight, .schedule-day, .session-item { grid-template-columns: 1fr; gap: 24px; }
+  .about-section, .venue-header, .learning-notes, .participation-inner, .highlight, .schedule-day, .session-item, .venue-cards { grid-template-columns: 1fr; gap: 24px; }
   .session-venue { grid-column: auto; justify-self: start; }
   .about-section h2 { margin-bottom: 0; }
   .activity-list { grid-template-columns: 1fr 1fr; gap: 28px 22px; }
