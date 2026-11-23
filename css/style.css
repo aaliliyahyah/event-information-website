@@ -36,23 +36,22 @@ hr { border: 0; border-top: 1px solid var(--line); }
 nav { display: flex; flex-wrap: wrap; gap: 12px 22px; }
 nav a { font-size: 0.875rem; text-decoration: none; }
 nav a:hover { text-decoration: underline; }
-.hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 72px; align-items: center; padding-block: 72px; }
+.hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; padding-block: 64px; }
 h1 { font-size: 1.125rem; font-weight: 400; line-height: 1.2; margin-bottom: 26px; }
 h1 > span { display: block; font-size: clamp(3.3rem, 6.5vw, 5.5rem); font-weight: 700; letter-spacing: -0.04em; margin-top: 22px; }
 h1 em { font-style: normal; text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 7px; text-underline-offset: 8px; }
 .hero-description { font-size: 1.125rem; max-width: 44ch; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 18px 26px; align-items: center; margin-block: 30px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 18px 26px; align-items: center; margin: 30px 0 0; }
 .button { display: inline-block; padding: 12px 22px; background: var(--navy); color: #fff; border-radius: 4px; text-decoration: none; font-size: 0.9375rem; font-weight: 700; }
 .button:hover { background: #244b7d; }
 .text-link { font-size: 0.9375rem; font-weight: 700; }
-.hero-details { font-size: 0.9375rem; margin-bottom: 0; }
-.hero-details span { margin-inline: 12px; color: #778397; }
-.event-poster { position: relative; background: var(--navy); color: #b2c3da; padding: 24px 30px; overflow: hidden; }
-.poster-top, .poster-bottom { display: flex; justify-content: space-between; gap: 16px; font-size: 0.75rem; letter-spacing: 0.06em; }
-.poster-art { max-width: 330px; margin: 22px auto 8px; }
-.poster-art svg { display: block; width: 100%; }
-.poster-title { position: relative; color: #fff; font-size: 2.4rem; font-weight: 700; line-height: 1.12; letter-spacing: -0.03em; margin-bottom: 28px; }
-.poster-bottom { color: var(--gold); border-top: 1px solid #526680; padding-top: 18px; font-weight: 700; }
+.hero-card { margin: 0; max-width: 520px; width: 100%; justify-self: end; background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: 0 22px 48px rgba(20, 45, 80, 0.10), 0 4px 12px rgba(20, 45, 80, 0.04); }
+.hero-collage { display: grid; grid-template-columns: repeat(12, 1fr); gap: 10px; padding: 10px; background: #fff; }
+.collage-tile { position: relative; margin: 0; height: 195px; border-radius: 8px; overflow: hidden; background: var(--light); }
+.tile-wide { grid-column: span 7; }
+.tile-narrow { grid-column: span 5; }
+.collage-tile img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.35s ease; }
+.collage-tile:hover img { transform: scale(1.03); }
 .proposal-note { padding: 18px 22px; background: var(--light); font-size: 0.875rem; margin-bottom: 0; }
 .proposal-note strong { color: var(--navy); }
 
@@ -114,6 +113,7 @@ pre { font-family: Consolas, monospace; font-size: 0.875rem; line-height: 1.8; w
 @media (max-width: 1000px) {
   .header-inner { flex-direction: column; align-items: flex-start; padding-block: 22px; gap: 18px; }
   .hero { gap: 36px; }
+  .collage-tile { height: 165px; }
   .about-section, .venue-section { gap: 40px; }
   .activity-list { column-gap: 24px; }
   .participation-inner { gap: 36px; }
@@ -126,7 +126,9 @@ pre { font-family: Consolas, monospace; font-size: 0.875rem; line-height: 1.8; w
   nav a { padding-block: 5px; }
   .hero { grid-template-columns: 1fr; padding-block: 44px; gap: 40px; }
   h1 > span { font-size: clamp(3rem, 12vw, 4.5rem); }
-  .event-poster { max-width: 450px; width: 100%; justify-self: center; }
+  .hero-card { max-width: 520px; justify-self: center; }
+  .collage-tile { height: 155px; }
+  .tile-wide, .tile-narrow { grid-column: span 6; }
   .about-section, .venue-section, .learning-notes, .participation-inner, .highlight { grid-template-columns: 1fr; gap: 24px; }
   .about-section h2 { margin-bottom: 0; }
   .activity-list { grid-template-columns: 1fr 1fr; gap: 28px 22px; }
@@ -138,8 +140,9 @@ pre { font-family: Consolas, monospace; font-size: 0.875rem; line-height: 1.8; w
 }
 @media (max-width: 420px) {
   .activity-list { grid-template-columns: 1fr; }
-  .hero-details span { margin-inline: 5px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .collage-tile img { transition: none; }
+  .collage-tile:hover img { transform: none; }
 }
