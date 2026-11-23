@@ -31,9 +31,8 @@ hr { border: 0; border-top: 1px solid var(--line); }
 /* Header and introduction */
 .site-header { border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; justify-content: space-between; align-items: center; gap: 24px; min-height: 100px; }
-.brand { white-space: nowrap; text-decoration: none; font-weight: 700; letter-spacing: 0.03em; font-size: 1.1rem; }
-.brand-mark { display: inline-block; background: var(--navy); color: #fff; padding: 5px 8px; margin-right: 3px; }
-.brand-year { color: var(--text); font-weight: 400; margin-left: 6px; }
+.brand { display: inline-flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+.brand-logo { display: block; height: 44px; width: auto; }
 nav { display: flex; flex-wrap: wrap; gap: 12px 22px; }
 nav a { font-size: 0.875rem; text-decoration: none; }
 nav a:hover { text-decoration: underline; }
@@ -122,6 +121,7 @@ pre { font-family: Consolas, monospace; font-size: 0.875rem; line-height: 1.8; w
 @media (max-width: 700px) {
   .container { width: calc(100% - 40px); }
   .section { padding-block: 48px; }
+  .brand-logo { height: 38px; }
   nav { gap: 10px 20px; }
   nav a { padding-block: 5px; }
   .hero { grid-template-columns: 1fr; padding-block: 44px; gap: 40px; }
