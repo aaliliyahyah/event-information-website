@@ -115,15 +115,22 @@ dd:last-child { margin-bottom: 0; }
 .highlight-detail { font-size: 0.875rem; color: var(--navy); }
 
 /* Participation and footer */
-.participation-band { background: var(--navy); color: #d5deeb; padding-block: 64px; }
+.participation-band { background: var(--navy); color: #d5deeb; padding-block: 80px; }
 .participation-band h2, .participation-band h3 { color: #fff; }
 .participation-band a { color: var(--gold); }
 .participation-band a:focus-visible { outline-color: var(--gold); }
-.participation-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 72px; align-items: center; }
+.participation-inner { display: grid; grid-template-columns: 1.15fr 1fr; gap: 64px; align-items: center; }
 .participation-inner ol { margin-bottom: 24px; }
-.announcement { background: #213e63; padding: 28px; }
-.announcement p { font-size: 0.875rem; }
-pre { font-family: Consolas, monospace; font-size: 0.875rem; line-height: 1.8; white-space: pre-wrap; overflow-wrap: anywhere; margin-bottom: 0; color: #fff; }
+.reminder-card { background: #fff; color: var(--text); border-radius: 8px; padding: 32px; box-shadow: 0 18px 40px rgba(7, 20, 38, 0.28); }
+.reminder-eyebrow { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; color: var(--text); margin-bottom: 8px; }
+.participation-band .reminder-card h3 { color: var(--navy); font-size: 1.35rem; margin-bottom: 8px; }
+.reminder-header p { font-size: 0.9375rem; margin-bottom: 20px; }
+.reminder-details { margin: 0; border-top: 1px solid var(--line); }
+.reminder-details div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-block: 11px; border-bottom: 1px solid var(--line); font-size: 0.9375rem; }
+.reminder-details dt { color: var(--text); font-weight: 400; }
+.reminder-details dd { margin: 0; color: var(--navy); font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
+.reminder-checklist { display: flex; align-items: center; gap: 10px; margin-top: 20px; padding: 14px 16px; background: var(--light); border-radius: 6px; color: var(--navy); font-size: 0.875rem; font-weight: 700; }
+.reminder-checklist svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--navy); }
 .site-footer { padding-top: 56px; }
 .footer-main { display: flex; justify-content: space-between; gap: 32px; padding-bottom: 32px; }
 .footer-main h2 { font-size: 1.75rem; margin-bottom: 18px; }
@@ -164,7 +171,9 @@ pre { font-family: Consolas, monospace; font-size: 0.875rem; line-height: 1.8; w
   .learning-notes { padding: 24px; }
   .highlight h3 { margin-bottom: 0; }
   .participation-band { padding-block: 48px; }
-  .announcement { padding: 22px; }
+  .reminder-card { padding: 24px; }
+  .reminder-details div { flex-direction: column; gap: 2px; }
+  .reminder-details dd { text-align: left; }
   .footer-main, .footer-bottom { flex-direction: column; gap: 18px; }
 }
 @media (max-width: 420px) {
